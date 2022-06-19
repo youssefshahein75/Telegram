@@ -8,7 +8,7 @@ $update = json_decode(file_get_contents('php://input'));
 header('Content-Type: application/json; charset=utf-8');
 //file_get_contents("https://api.telegram.org/bot".API_KEY."/setwebhook?url=".$_SERVER['SERVER_NAME']."".$_SERVER['SCRIPT_NAME']);
 function bot($method,$datas=[]){
-    $url = "https://youssefindexbot.herokuapp.com/".API_KEY."/".$method;
+    $url = "https://api.telegram.org/bot".API_KEY."/".$method;
 	$ch = curl_init();
     curl_setopt($ch,CURLOPT_URL,$url);
     curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
